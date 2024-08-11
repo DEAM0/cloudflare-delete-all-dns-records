@@ -1,16 +1,13 @@
 import requests
 
-# Cloudflare API údaje
-api_token = "TYJTTcIqEPDX8NuHaWkjvfWV25ifi6hqqc4SCdUd"
-zone_id = "17bc825db3e90a62e08ba1b21a6937e8"
+api_token = ""
+zone_id = ""
 
-# Hlavičky pre autentifikáciu
 headers = {
     "Authorization": f"Bearer {api_token}",
     "Content-Type": "application/json",
 }
 
-# Získanie zoznamu všetkých DNS záznamov
 list_dns_url = f"https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records"
 response = requests.get(list_dns_url, headers=headers)
 
